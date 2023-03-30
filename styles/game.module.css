@@ -176,6 +176,7 @@
 
 	.game-content {
 		flex-direction: column;
+        align-items: start;
 	}
 
 	.game-board {
@@ -195,7 +196,7 @@
 		flex-direction: column;
 		align-items: center;
 		margin-top: 20px;
-		width: 200px;
+		width: 100%;
 		max-width: 90vw;
 	}
 
