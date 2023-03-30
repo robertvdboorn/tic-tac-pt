@@ -156,10 +156,62 @@
 }
 
 .title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Make the game responsive for mobile devices */
+@media only screen and (max-width: 600px) {
+	.game-content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.game-board {
+		width: 80vw;
+		height: 80vw;
+	}
+
+	.square {
+		font-size: 6vw;
+		line-height: 10vw;
+		height: 10vw;
+		width: 10vw;
+	}
+
+	.game-info {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.status-text {
+		font-size: 4vw;
+		margin-bottom: 10px;
+		text-shadow: none;
+	}
+
+	.score-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.small-board-container {
+		width: 80vw;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.small-board {
+		width: 20vw;
+		height: 20vw;
+	}
+
+	.small-square {
+		font-size: 3vw;
+		height: calc((20vw - 2px * 2) / 3);
+		width: calc((20vw - 2px * 2) / 3);
+	}
+}

@@ -47,7 +47,7 @@
 	font-weight: bold;
 	color: white;
 	height: calc((60px - 2px * 4) / 3);
-    border: 1px solid #999;
+	border: 1px solid #999;
 }
 
 .small-square:empty {
