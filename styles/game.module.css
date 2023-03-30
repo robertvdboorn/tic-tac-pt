@@ -165,45 +165,54 @@
 
 /* Make the game responsive for mobile devices */
 @media only screen and (max-width: 600px) {
+    .game {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        font-family: "Arial", sans-serif;
+        background-color: #282c34;
+        color: white;
+    }
+
 	.game-content {
 		flex-direction: column;
 		align-items: center;
 	}
 
-    .game-board {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        width: 300px;
-        height: 300px;
-        margin: 20px;
-        background-color: #21252b;
-        gap: 1px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }    
-
-    .square {
-        background: #21252b;
-        border: 1px solid #999;
-        font-size: 8vw;
-        font-weight: bold;
-        line-height: 100%;
-        height: 100%;
-        margin: -1px;
-        padding: 0;
-        text-align: center;
-        width: 100%;
-        color: white;
-        outline: none;
-    }
-    
+	.game-board {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		width: 300px;
+		height: 300px;
+		margin: 20px auto 0;
+		background-color: #21252b;
+		gap: 1px;
+		position: relative;
+	}
 
 	.game-info {
-		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+		width: 200px;
+		max-width: 90vw;
+	}
+
+	.square {
+		background: #21252b;
+		border: 1px solid #999;
+		font-size: 8vw;
+		font-weight: bold;
+		line-height: 100%;
+		height: 100%;
+		margin: -1px;
+		padding: 0;
+		text-align: center;
 		width: 100%;
+		color: white;
+		outline: none;
 	}
 
 	.status-text {
@@ -234,11 +243,18 @@
 		width: calc((20vw - 2px * 2) / 3);
 	}
 
-    .x-move {
-        color: red;
-    }
-    
-    .o-move {
-        color: #0070f3;
-    }
+	.x-move {
+		color: red;
+	}
+
+	.o-move {
+		color: #0070f3;
+	}
+
+	.moves {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 }
