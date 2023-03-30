@@ -1,0 +1,165 @@
+.game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: "Arial", sans-serif;
+	background-color: #282c34;
+	color: white;
+}
+
+.game-content {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.game-board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	width: 300px;
+	height: 300px;
+	margin: 20px;
+	background-color: #21252b;
+	gap: 1px;
+}
+
+.board-row {
+	display: contents;
+}
+
+.square {
+	background: #21252b;
+	border: 1px solid #999;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 100px;
+	height: 100px;
+	margin: -1px;
+	padding: 0;
+	text-align: center;
+	width: 100px;
+	color: white;
+	outline: none;
+}
+
+.square-filled {
+	cursor: not-allowed;
+}
+
+.square:not(.square-filled):hover {
+	background-color: #3a4049;
+	cursor: pointer;
+}
+
+.game-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	width: 200px;
+}
+
+.move-button {
+	display: block;
+	text-align: left;
+	white-space: nowrap;
+	margin: 2px 0;
+}
+
+.status {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.status-text {
+	font-size: 24px;
+	font-weight: bold;
+	color: #e6e6e6;
+	margin-bottom: 20px;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.score-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.moves {
+	list-style-type: none;
+	padding: 0;
+}
+
+.moves li button {
+	background: none;
+	border: none;
+	color: #61dafb;
+	cursor: pointer;
+	font-size: 16px;
+	outline: none;
+	padding: 5px;
+}
+
+.moves li button:hover {
+	color: #8dd9ff;
+}
+
+.x-move {
+	color: red;
+}
+
+.o-move {
+	color: #0070f3;
+}
+
+.move {
+	background-color: #444;
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	margin: 4px 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.move:hover {
+	background-color: #0070f3;
+	color: white;
+}
+
+.step {
+	margin-bottom: 4px;
+}
+
+.small-board-container {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+	padding: 8px;
+	background-color: #222;
+	border-radius: 4px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step:hover .small-board-container {
+	display: block;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
